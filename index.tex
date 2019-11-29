@@ -1,28 +1,26 @@
 \documentclass[12pt]{jsarticle}
 \begin{document}
 
-\title{TITLE}
-\author{AUTHOR}
+\title{タイトル}
+\author{著者}
 \maketitle
 
-\section{SECTION}
-items
+\section{節}
 
+\subsection{箇条書き}
 \begin{itemize}
   \item item
 \end{itemize}
 
-\subsection{SUBSECTION}
-enumerates
-
+\subsection{箇条書き(連番)}
 \begin{enumerate}
   \item item
 \end{enumerate}
 
-\subsection{SUBSECTION}
+\subsection{表}
 \ref{tb:table}
 
-\begin{table}[tbp]
+\begin{table}[hbtb]
   \centering
   \caption{a table}
   \label{tb:table}
@@ -36,7 +34,69 @@ enumerates
   \end{tabular}
 \end{table}
 
-\bibliography{./refs.bib}
+\subsection{数式}
+\subsubsection{epsilon-delta definition of the limit.}
+Let $f(x)$ be defined for all $x \neq a$ over an open interval containing $a$. Let $L$ be a real number. Then
+$$\lim_{x \rightarrow a} f(x) = L$$
+if, for every $\epsilon > 0$, then exists a $\delta > 0$ such that if $0 < |x - a| < \delta$, then $|f(x) - L| < \epsilon$
+
+\subsubsection{イプシロンデルタによる関数の連続性の定義}
+実数値関数$f: \mathbf{R} \rightarrow \mathbf{R}$があり，$a$を含む開区間$I$において
+$$\lim_{x \rightarrow a} f(x) = f(a)$$
+であるとは，
+$$\forall \epsilon > 0, \forall a \in I, \exists \delta > 0\mbox{ s.t. } |x - a| < \delta \Rightarrow |f(x) - f(a)| < \epsilon$$
+
+\end{document}
+\documentclass[12pt]{jsarticle}
+\begin{document}
+
+\title{タイトル}
+\author{著者}
+\maketitle
+
+\section{節}
+引用例\cite{Sample}
+
+\subsection{箇条書き}
+\begin{itemize}
+  \item item
+\end{itemize}
+
+\subsection{箇条書き(連番)}
+\begin{enumerate}
+  \item item
+\end{enumerate}
+
+\subsection{表}
+\ref{tb:table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{a table}
+  \label{tb:table}
+  \begin{tabular}{cc}
+    \hline
+    foo & bar \\
+    \hline \hline
+    0 & 1 \\
+    2 & 3 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{数式}
+\subsubsection{epsilon-delta definition of the limit.}
+Let $f(x)$ be defined for all $x \neq a$ over an open interval containing $a$. Let $L$ be a real number. Then
+$$\lim_{x \rightarrow a} f(x) = L$$
+if, for every $\epsilon > 0$, then exists a $\delta > 0$ such that if $0 < |x - a| < \delta$, then $|f(x) - L| < \epsilon$
+
+\subsubsection{イプシロンデルタによる関数の連続性の定義}
+実数値関数$f: \mathbf{R} \rightarrow \mathbf{R}$があり，$a$を含む開区間$I$において
+$$\lim_{x \rightarrow a} f(x) = f(a)$$
+であるとは，
+$$\forall \epsilon > 0, \forall a \in I, \exists \delta > 0 \mbox{ s.t. } |x - a| < \delta \Rightarrow |f(x) - f(a)| < \epsilon$$
+
+\bibliography{./refs.biiteitem}
 \bibliographystyle{junsrt}
 
 \end{document}
