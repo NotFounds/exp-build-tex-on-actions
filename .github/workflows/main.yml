@@ -1,0 +1,18 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1  
+    - name: Build latex file
+      uses: docker://paperist/alpine-texlive-ja
+      with:
+        args: latexmk index.tex
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: index.pdf
+        path: index.pdf
